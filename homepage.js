@@ -139,6 +139,8 @@ Webflow.push(function () {
 		Webflow.require('ix2').init();
 
 		let lottie = Webflow.require('lottie').lottie;
+		let animations =
+			window.Webflow.require('lottie').lottie.getRegisteredAnimations();
 		function LottieScrollTrigger(vars) {
 			let playhead = { frame: 0 },
 				target = gsap.utils.toArray(vars.target)[0],
@@ -146,7 +148,7 @@ Webflow.push(function () {
 				scrollTarget = gsap.utils.toArray(vars.scrollTarget)[0],
 				st = {
 					trigger: scrollTarget,
-					start: '0',
+					start: 'top top',
 				},
 				animation = lottie.loadAnimation({
 					container: target,
@@ -155,6 +157,7 @@ Webflow.push(function () {
 					autoplay: false,
 					path: vars.path,
 				});
+
 			for (let p in vars) {
 				// let users override the ScrollTrigger defaults
 				st[p] = vars[p];
@@ -172,11 +175,9 @@ Webflow.push(function () {
 		}
 		LottieScrollTrigger({
 			target: '#lottieCharacter',
-			path: 'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641c56242dc6061a40246115_loopingAnimation.json',
-			speed: 'slow',
+			path: 'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641c6d795beffaa2bf1f9378_loopingAnimation-2.json',
 			scrollTarget: '#creators-and-rewards',
-			scrub: 0.1, // seconds it takes for the playhead to "catch up"
-			// you can also add ANY ScrollTrigger values here too, like trigger, start, end, onEnter, onLeave, onUpdate, etc. See https://greensock.com/docs/v3/Plugins/ScrollTrigger
+			scrub: 0.01,
 		});
 	}
 });
@@ -252,3 +253,14 @@ slides.forEach((s) => {
 		digitalImage.classList.toggle('hidden');
 	});
 });
+
+const dotlottiePlayer = document.createElement('div');
+dotlottiePlayer.innerHTML = `<dotlottie-player
+	autoplay
+	controls
+	loop
+	mode='normal'
+	src='http://dotlottieio.s3-website-us-east-1.amazonaws.com/sample_files/animation-external-image.lottie'
+	style='width: 320px'></dotlottie-player>`;
+
+document.body.appendChild(dotlottiePlayer);
