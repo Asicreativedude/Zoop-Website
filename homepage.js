@@ -11,136 +11,171 @@ Webflow.push(function () {
 		section.setAttribute('id', 'exploreZoop');
 		section.setAttribute('data-w-id', '7f5755a0-aa45-0b06-08be-9749e0dc4524');
 
-		const div1 = document.createElement('div');
-		div1.classList.add('sidescroll-camera');
-		section.appendChild(div1);
-		const div2 = document.createElement('div');
-		section.appendChild(div2);
-		div2.classList.add('sidescroll-frame');
+		const divCamera = document.createElement('div');
+		divCamera.classList.add('sidescroll-camera');
+		section.appendChild(divCamera);
+		const divFrame = document.createElement('div');
+		section.appendChild(divFrame);
+		divFrame.classList.add('sidescroll-frame');
+		divCamera.appendChild(divFrame);
 
-		div1.appendChild(div2);
-
-		const div3 = document.createElement('div');
-		div3.classList.add('sidescroll-img-w');
-		div2.appendChild(div3);
-		const img1 = document.createElement('img');
-		img1.setAttribute(
+		const divImgW = document.createElement('div');
+		divImgW.classList.add('sidescroll-img-w');
+		divFrame.appendChild(divImgW);
+		const bgImg = document.createElement('img');
+		bgImg.setAttribute(
 			'src',
-			'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641c175290d4cc1b796ca88d_sidescroll-back.webp'
+			'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641dc590ad39aec6dd55bb06_bg2.webp'
 		);
-		img1.setAttribute('loading', 'lazy');
-		img1.setAttribute('alt', '');
-		img1.classList.add('sidescroll-sky');
-		const img3 = document.createElement('img');
-		img3.setAttribute(
+		bgImg.setAttribute('loading', 'lazy');
+		bgImg.setAttribute('alt', '');
+		bgImg.classList.add('sidescroll-sky');
+		const frontImg = document.createElement('img');
+		frontImg.setAttribute(
 			'src',
 			'https://global-uploads.webflow.com/640529b41dc5457b7da3eb69/641bfaa95ee80a5ffdc5d30f_side-front.webp'
 		);
-		img3.setAttribute('loading', 'lazy');
-		img3.setAttribute('alt', '');
-		img3.classList.add('sidescroll-img-1');
+		frontImg.setAttribute('loading', 'lazy');
+		frontImg.setAttribute('alt', '');
+		frontImg.classList.add('sidescroll-img-1');
 		const charDiv = document.createElement('div');
 		charDiv.setAttribute('id', 'lottieCharacter');
 		charDiv.classList.add('character');
-		div3.appendChild(charDiv);
-		div3.appendChild(img1);
-		div3.appendChild(img3);
+		divImgW.appendChild(charDiv);
+		divImgW.appendChild(bgImg);
+		divImgW.appendChild(frontImg);
 
-		const div4 = document.createElement('div');
-		div4.classList.add('sidescroll-screen-w');
-		div2.appendChild(div4);
-		const div5 = document.createElement('div');
-		div5.classList.add('container');
-		const h2 = document.createElement('h2');
-		h2.classList.add('sidescroll-title');
-		h2.innerText = 'Explore ZOOP';
-		div5.appendChild(h2);
-		div4.appendChild(div5);
+		const sideScroll1 = document.createElement('div');
+		sideScroll1.classList.add('sidescroll-screen-w');
+		divFrame.appendChild(sideScroll1);
+		const sideScroll1Container = document.createElement('div');
+		sideScroll1Container.classList.add('container');
+		sideScroll1Container.classList.add('sidescroll-container');
+		const sideScroll1Title = document.createElement('h2');
+		sideScroll1Title.classList.add('sidescroll-title');
+		sideScroll1Title.innerText = 'Explore ZOOP';
+		sideScroll1Container.appendChild(sideScroll1Title);
+		// sideScroll1.appendChild(sideScroll1Container);
+		const sideScroll1BG = document.createElement('div');
+		sideScroll1BG.classList.add('sidescroll-screen-w');
+		sideScroll1BG.appendChild(sideScroll1Container);
+		divImgW.appendChild(sideScroll1BG);
 
-		const div6 = document.createElement('div');
-		div6.classList.add('sidescroll-screen-w');
-		div2.appendChild(div6);
-		const div7 = document.createElement('div');
-		div7.classList.add('container');
-		div7.classList.add('full-width');
-		const div8 = document.createElement('div');
-		div8.classList.add('sidescroll-content-box');
-		const h3 = document.createElement('h3');
-		h3.classList.add('sidescroll-content-title');
-		h3.innerText = 'Explore and Follow';
+		const sideScroll2 = document.createElement('div');
+		sideScroll2.classList.add('sidescroll-screen-w');
+		sideScroll2.classList.add('z-index-5');
+		divFrame.appendChild(sideScroll2);
+		const sideScroll2Container = document.createElement('div');
+		sideScroll2Container.classList.add('container');
+		sideScroll2Container.classList.add('sidescroll-container');
+		const contentBox = document.createElement('div');
+		contentBox.classList.add('sidescroll-content-box');
+		const contentBoxTitle = document.createElement('h3');
+		contentBoxTitle.classList.add('sidescroll-content-title');
+		contentBoxTitle.innerText = 'Explore and Follow';
 		const p = document.createElement('p');
 		p.classList.add('p-big');
 		p.innerText =
 			'Dive into our super inclusive party of celebrities and creators. Follow your favorites to unlock exclusive feeds with awesome content available on Zoop only! Connect with comments, likes, and replies.';
-		div8.appendChild(h3);
-		div8.appendChild(p);
-		div7.appendChild(div8);
-		div6.appendChild(div7);
-		div2.appendChild(div6);
-		const div9 = document.createElement('div');
-		div9.classList.add('sidescroll-screen-w');
-		const div10 = document.createElement('div');
-		div10.classList.add('container');
-		div10.classList.add('full-width');
-		const div11 = document.createElement('div');
-		div11.classList.add('sidescroll-content-box');
-		const h31 = document.createElement('h3');
-		h31.classList.add('sidescroll-content-title');
-		h31.innerText = 'Explore and Follow';
+
+		contentBox.appendChild(contentBoxTitle);
+		contentBox.appendChild(p);
+		sideScroll2Container.appendChild(contentBox);
+		sideScroll2.appendChild(sideScroll2Container);
+		divFrame.appendChild(sideScroll2);
+		const sideScroll3 = document.createElement('div');
+		sideScroll3.classList.add('sidescroll-screen-w');
+		sideScroll3.classList.add('z-index-5');
+		const sideScroll3Container = document.createElement('div');
+		sideScroll3Container.classList.add('container');
+		sideScroll3Container.classList.add('sidescroll-container');
+		const contentBox2 = document.createElement('div');
+		contentBox2.classList.add('sidescroll-content-box');
+		const contentBox2Title = document.createElement('h3');
+		contentBox2Title.classList.add('sidescroll-content-title');
+		contentBox2Title.innerText = 'Collect Cards';
 		const p1 = document.createElement('p');
 		p1.classList.add('p-big');
 		p1.innerText =
-			'Dive into our super inclusive party of celebrities and creators. Follow your favorites to unlock exclusive feeds with awesome content available on Zoop only! Connect with comments, likes, and replies.';
-		div11.appendChild(h31);
-		div11.appendChild(p1);
-		div10.appendChild(div11);
-		div9.appendChild(div10);
-		div2.appendChild(div9);
-		const div12 = document.createElement('div');
-		div12.classList.add('sidescroll-screen-w');
-		const div13 = document.createElement('div');
-		div13.classList.add('container');
-		div13.classList.add('full-width');
-		const div14 = document.createElement('div');
-		div14.classList.add('sidescroll-content-box');
-		const h32 = document.createElement('h3');
-		h32.classList.add('sidescroll-content-title');
-		h32.innerText = 'Explore and Follow';
+			'Start collecting cards to take it to the next level. Cards come out in Seasons. Collect at least 6 cards in a Season! Trade, buy, and sell cards to become a member of a unique community of fans.';
+		const screenImage = document.createElement('img');
+		screenImage.setAttribute(
+			'src',
+			'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641ec6241987287e3d2b63aa_cards.png'
+		);
+		screenImage.setAttribute('loading', 'lazy');
+		screenImage.setAttribute('alt', 'cards');
+		screenImage.classList.add('sidescroll-content-img');
+
+		contentBox2.appendChild(contentBox2Title);
+		contentBox2.appendChild(p1);
+		sideScroll3Container.appendChild(contentBox2);
+		sideScroll3Container.appendChild(screenImage);
+		sideScroll3.appendChild(sideScroll3Container);
+		divFrame.appendChild(sideScroll3);
+		const sideScroll4 = document.createElement('div');
+		sideScroll4.classList.add('sidescroll-screen-w');
+		sideScroll4.classList.add('z-index-5');
+		const sideScroll4Container = document.createElement('div');
+		sideScroll4Container.classList.add('container');
+		sideScroll4Container.classList.add('sidescroll-container');
+		const contentBox3 = document.createElement('div');
+		contentBox3.classList.add('sidescroll-content-box');
+		const contentBox3Title = document.createElement('h3');
+		contentBox3Title.classList.add('sidescroll-content-title');
+		contentBox3Title.innerText = 'Win Rewards';
 		const p2 = document.createElement('p');
 		p2.classList.add('p-big');
 		p2.innerText =
-			'Dive into our super inclusive party of celebrities and creators. Follow your favorites to unlock exclusive feeds with awesome content available on Zoop only! Connect with comments, likes, and replies.';
-		div14.appendChild(h32);
-		div14.appendChild(p2);
-		div13.appendChild(div14);
-		div12.appendChild(div13);
-		div2.appendChild(div12);
-		const div15 = document.createElement('div');
-		div15.classList.add('sidescroll-screen-w');
-		const div16 = document.createElement('div');
-		div16.classList.add('container');
-		div16.classList.add('full-width');
-		const div17 = document.createElement('div');
-		div17.classList.add('sidescroll-content-box');
-		const h33 = document.createElement('h3');
-		h33.classList.add('sidescroll-content-title');
-		h33.innerText = 'Explore and Follow';
+			'Keep collecting and connecting to get a chance to win personalized rewards from Your Favorite Celebrities & Creators!';
+		const screenImage2 = document.createElement('img');
+		screenImage2.setAttribute(
+			'src',
+			'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641ec715daa97c0e6b7d2a77_rewards.png'
+		);
+		screenImage2.setAttribute('loading', 'lazy');
+		screenImage2.setAttribute('alt', 'rewards');
+		screenImage2.classList.add('sidescroll-content-img');
+
+		contentBox3.appendChild(contentBox3Title);
+		contentBox3.appendChild(p2);
+		sideScroll4Container.appendChild(contentBox3);
+		sideScroll4Container.appendChild(screenImage2);
+		sideScroll4.appendChild(sideScroll4Container);
+		divFrame.appendChild(sideScroll4);
+		const sideScroll5 = document.createElement('div');
+		sideScroll5.classList.add('sidescroll-screen-w');
+		sideScroll5.classList.add('z-index-5');
+		const sideScroll5Container = document.createElement('div');
+		sideScroll5Container.classList.add('container');
+		sideScroll5Container.classList.add('sidescroll-container');
+		const contentBox4 = document.createElement('div');
+		contentBox4.classList.add('sidescroll-content-box');
+		contentBox4.classList.add('cta-box');
+		const contentBox4Title = document.createElement('h3');
+		contentBox4Title.classList.add('sidescroll-content-title');
+		contentBox4Title.innerText = 'Join Zoop';
 		const p3 = document.createElement('p');
 		p3.classList.add('p-big');
-		p3.innerText =
-			'Dive into our super inclusive party of celebrities and creators. Follow your favorites to unlock exclusive feeds with awesome content available on Zoop only! Connect with comments, likes, and replies.';
-		div17.appendChild(h33);
-		div17.appendChild(p3);
-		div16.appendChild(div17);
-		div15.appendChild(div16);
-		div2.appendChild(div15);
+		p3.classList.add('margin-0');
+		p3.innerText = `Zoop is free and easy to use! All you need is an email.
+		Isn’t that zooper cool?`;
+		const ctaBtn = document.createElement('button');
+		ctaBtn.classList.add('main-button');
+		ctaBtn.classList.add('is--invert-button');
+		ctaBtn.innerHTML = 'Explore Free Now';
+
+		contentBox4.appendChild(contentBox4Title);
+		contentBox4.appendChild(p3);
+		contentBox4.appendChild(ctaBtn);
+		sideScroll5Container.appendChild(contentBox4);
+		sideScroll5.appendChild(sideScroll5Container);
+		divFrame.appendChild(sideScroll5);
 
 		document.querySelector('.sidescroll-append').appendChild(section);
 		Webflow.require('ix2').init();
 
 		let lottie = Webflow.require('lottie').lottie;
-		let animations =
-			window.Webflow.require('lottie').lottie.getRegisteredAnimations();
 		function LottieScrollTrigger(vars) {
 			let playhead = { frame: 0 },
 				target = gsap.utils.toArray(vars.target)[0],
@@ -149,6 +184,7 @@ Webflow.push(function () {
 				st = {
 					trigger: scrollTarget,
 					start: 'top top',
+					end: '78% bottom',
 				},
 				animation = lottie.loadAnimation({
 					container: target,
@@ -177,22 +213,28 @@ Webflow.push(function () {
 			target: '#lottieCharacter',
 			path: 'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641c6d795beffaa2bf1f9378_loopingAnimation-2.json',
 			scrollTarget: '#creators-and-rewards',
-			scrub: 0.01,
+			scrub: 0.001,
 		});
 	}
 });
 
 const swiper = new Swiper('.swiper', {
-	speed: 600,
+	speed: 5000,
 	loop: true,
+	autoplay: {
+		delay: 1,
+		disableOnInteraction: false,
+	},
 	autoHeight: false,
 	centeredSlides: true,
 	followFinger: true,
-	freeMode: false,
-	slideToClickedSlide: false,
+	freeMode: {
+		enabled: true,
+		sticky: false,
+		momentum: true,
+	},
 	slidesPerView: 'auto',
 	spaceBetween: 32,
-	rewind: false,
 	mousewheel: {
 		forceToAxis: true,
 	},
@@ -253,14 +295,3 @@ slides.forEach((s) => {
 		digitalImage.classList.toggle('hidden');
 	});
 });
-
-const dotlottiePlayer = document.createElement('div');
-dotlottiePlayer.innerHTML = `<dotlottie-player
-	autoplay
-	controls
-	loop
-	mode='normal'
-	src='http://dotlottieio.s3-website-us-east-1.amazonaws.com/sample_files/animation-external-image.lottie'
-	style='width: 320px'></dotlottie-player>`;
-
-document.body.appendChild(dotlottiePlayer);
