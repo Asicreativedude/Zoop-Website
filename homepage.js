@@ -101,7 +101,7 @@ Webflow.push(function () {
 		const screenImage = document.createElement('img');
 		screenImage.setAttribute(
 			'src',
-			'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641ec6241987287e3d2b63aa_cards.png'
+			'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/64204d297a77c6da3faba95c_cards2.webp'
 		);
 		screenImage.setAttribute('loading', 'lazy');
 		screenImage.setAttribute('alt', 'cards');
@@ -131,7 +131,7 @@ Webflow.push(function () {
 		const screenImage2 = document.createElement('img');
 		screenImage2.setAttribute(
 			'src',
-			'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641ec715daa97c0e6b7d2a77_rewards.png'
+			'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/64204ce83e9344069810087e_rewards.webp'
 		);
 		screenImage2.setAttribute('loading', 'lazy');
 		screenImage2.setAttribute('alt', 'rewards');
