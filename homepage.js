@@ -50,12 +50,24 @@ Webflow.push(function () {
 		divFrame.appendChild(sideScroll1);
 		const sideScroll1Container = document.createElement('div');
 		sideScroll1Container.classList.add('container');
-		sideScroll1Container.classList.add('sidescroll-container');
+		sideScroll1Container.classList.add('first-sidescroll-container');
 		const sideScroll1Title = document.createElement('h2');
 		sideScroll1Title.classList.add('sidescroll-title');
 		sideScroll1Title.innerText = 'Explore ZOOP';
 		sideScroll1Container.appendChild(sideScroll1Title);
-		// sideScroll1.appendChild(sideScroll1Container);
+		const firstBox = document.createElement('div');
+		firstBox.classList.add('sidescroll-content-first-box');
+		const firstBoxP = document.createElement('p');
+		firstBoxP.classList.add('p-big');
+		firstBoxP.innerText =
+			'Collect Cards every Season and get more chances to win. From a personalized shout-out to a real-life meet and greet - the opportunities to create an unforgettable connection are limitless!';
+		firstBox.appendChild(firstBoxP);
+		const firstBoxTitle = document.createElement('h3');
+		firstBoxTitle.classList.add('sidescroll-content-title');
+		firstBoxTitle.innerText = 'It’s not just a Card - it’s an experience';
+		firstBox.appendChild(firstBoxTitle);
+		sideScroll1Container.appendChild(firstBox);
+
 		const sideScroll1BG = document.createElement('div');
 		sideScroll1BG.classList.add('sidescroll-screen-w');
 		sideScroll1BG.appendChild(sideScroll1Container);
