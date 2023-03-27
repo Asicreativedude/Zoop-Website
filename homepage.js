@@ -109,7 +109,7 @@ Webflow.push(function () {
 		const p1 = document.createElement('p');
 		p1.classList.add('p-big');
 		p1.innerText =
-			'Start collecting cards to take it to the next level. Cards come out in Seasons. Collect at least 6 cards in a Season! Trade, buy, and sell cards to become a member of a unique community of fans.';
+			'Start collecting Cards to take it to the next level. Cards come out in Seasons. Collect at least 6 Cards in a Season! Trade, buy, and sell cards to become a member of a unique community of fans.';
 		const screenImage = document.createElement('img');
 		screenImage.setAttribute(
 			'src',
