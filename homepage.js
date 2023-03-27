@@ -53,7 +53,7 @@ Webflow.push(function () {
 		sideScroll1Container.classList.add('first-sidescroll-container');
 		const sideScroll1Title = document.createElement('h2');
 		sideScroll1Title.classList.add('sidescroll-title');
-		sideScroll1Title.innerText = 'Explore ZOOP';
+		sideScroll1Title.innerText = 'Explore Zoop';
 		sideScroll1Container.appendChild(sideScroll1Title);
 		const firstBox = document.createElement('div');
 		firstBox.classList.add('sidescroll-content-first-box');
