@@ -84,12 +84,11 @@ Webflow.push(function () {
 		contentBox.classList.add('sidescroll-content-box');
 		const contentBoxTitle = document.createElement('h3');
 		contentBoxTitle.classList.add('sidescroll-content-title');
-		contentBoxTitle.innerText = 'Explore and Follow';
+		contentBoxTitle.innerText = 'Discover and Follow';
 		const p = document.createElement('p');
 		p.classList.add('p-big');
 		p.innerText =
 			'Dive into our super inclusive party of celebrities and creators. Follow your favorites to unlock exclusive feeds with awesome content available on Zoop only! Connect with comments, likes, and replies.';
-
 		contentBox.appendChild(contentBoxTitle);
 		contentBox.appendChild(p);
 		sideScroll2Container.appendChild(contentBox);
