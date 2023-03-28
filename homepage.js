@@ -95,6 +95,7 @@ Webflow.push(function () {
 		contentBox.classList.add('sidescroll-content-box');
 		const contentBoxTitle = document.createElement('h3');
 		contentBoxTitle.classList.add('sidescroll-content-title');
+
 		contentBoxTitle.innerText = secondBoxTitleText.innerHTML;
 		const p = document.createElement('p');
 		p.classList.add('p-big');
