@@ -3,6 +3,18 @@ Webflow.push(function () {
 	window.addEventListener('resize', function () {
 		window.Webflow.require('lottie').lottie.resize();
 	});
+	const sidescrolltitle = document.getElementById('sidescroll-title');
+	const firstBoxPText = document.getElementById('firstbox-p');
+	const firstBoxTitleText = document.getElementById('firstbox-title');
+	const secondBoxPText = document.getElementById('secondbox-p');
+	const secondBoxTitleText = document.getElementById('secondbox-title');
+	const thirdBoxPText = document.getElementById('thirdbox-p');
+	const thirdBoxTitleText = document.getElementById('thirdbox-title');
+	const fourthBoxPText = document.getElementById('fourthbox-p');
+	const fourthBoxTitleText = document.getElementById('fourthbox-title');
+	const ctaBoxpText = document.getElementById('ctabox-p');
+	const ctaBoxTitleText = document.getElementById('ctabox-title');
+	const ctaBoxButtonText = document.getElementById('ctabox-button');
 
 	if (window.innerWidth > 991) {
 		const section = document.createElement('section');
@@ -53,18 +65,17 @@ Webflow.push(function () {
 		sideScroll1Container.classList.add('first-sidescroll-container');
 		const sideScroll1Title = document.createElement('h2');
 		sideScroll1Title.classList.add('sidescroll-title');
-		sideScroll1Title.innerText = 'Explore Zoop';
+		sideScroll1Title.innerText = sidescrolltitle.innerHTML;
 		sideScroll1Container.appendChild(sideScroll1Title);
 		const firstBox = document.createElement('div');
 		firstBox.classList.add('sidescroll-content-first-box');
 		const firstBoxP = document.createElement('p');
 		firstBoxP.classList.add('p-big');
-		firstBoxP.innerText =
-			'Collect Cards every Season and get more chances to win. From a personalized shout-out to a real-life meet and greet - the opportunities to create an unforgettable connection are limitless!';
+		firstBoxP.innerText = firstBoxPText.innerHTML;
 		firstBox.appendChild(firstBoxP);
 		const firstBoxTitle = document.createElement('h3');
 		firstBoxTitle.classList.add('sidescroll-content-title');
-		firstBoxTitle.innerText = 'It’s not just a Card - it’s an experience';
+		firstBoxTitle.innerText = firstBoxTitleText.innerHTML;
 		firstBox.appendChild(firstBoxTitle);
 		sideScroll1Container.appendChild(firstBox);
 
@@ -84,11 +95,11 @@ Webflow.push(function () {
 		contentBox.classList.add('sidescroll-content-box');
 		const contentBoxTitle = document.createElement('h3');
 		contentBoxTitle.classList.add('sidescroll-content-title');
-		contentBoxTitle.innerText = 'Discover and Follow';
+
+		contentBoxTitle.innerText = secondBoxTitleText.innerHTML;
 		const p = document.createElement('p');
 		p.classList.add('p-big');
-		p.innerText =
-			'Dive into our super inclusive party of celebrities and creators. Follow your favorites to unlock exclusive feeds with awesome content available on Zoop only! Connect with comments, likes, and replies.';
+		p.innerText = secondBoxPText.innerHTML;
 		contentBox.appendChild(contentBoxTitle);
 		contentBox.appendChild(p);
 		sideScroll2Container.appendChild(contentBox);
@@ -104,11 +115,10 @@ Webflow.push(function () {
 		contentBox2.classList.add('sidescroll-content-box');
 		const contentBox2Title = document.createElement('h3');
 		contentBox2Title.classList.add('sidescroll-content-title');
-		contentBox2Title.innerText = 'Collect Cards';
+		contentBox2Title.innerText = thirdBoxTitleText.innerHTML;
 		const p1 = document.createElement('p');
 		p1.classList.add('p-big');
-		p1.innerText =
-			'Start collecting Cards to take it to the next level. Cards come out in Seasons. Collect at least 5 Cards in a Season to get a chance to win rewards! Trade, buy, and sell cards to become a member of a unique community of fans.';
+		p1.innerText = thirdBoxPText.innerHTML;
 		const screenImage = document.createElement('img');
 		screenImage.setAttribute(
 			'src',
@@ -134,11 +144,10 @@ Webflow.push(function () {
 		contentBox3.classList.add('sidescroll-content-box');
 		const contentBox3Title = document.createElement('h3');
 		contentBox3Title.classList.add('sidescroll-content-title');
-		contentBox3Title.innerText = 'Win Rewards';
+		contentBox3Title.innerText = fourthBoxTitleText.innerHTML;
 		const p2 = document.createElement('p');
 		p2.classList.add('p-big');
-		p2.innerText =
-			'Keep collecting and connecting to get a chance to win personalized rewards from Your Favorite Celebrities & Creators!';
+		p2.innerText = fourthBoxPText.innerHTML;
 		const screenImage2 = document.createElement('img');
 		screenImage2.setAttribute(
 			'src',
@@ -165,16 +174,16 @@ Webflow.push(function () {
 		contentBox4.classList.add('cta-box');
 		const contentBox4Title = document.createElement('h3');
 		contentBox4Title.classList.add('sidescroll-content-title');
-		contentBox4Title.innerText = 'Join Zoop';
+		contentBox4Title.innerText = ctaBoxTitleText.innerHTML;
 		const p3 = document.createElement('p');
 		p3.classList.add('p-big');
 		p3.classList.add('margin-0');
-		p3.innerText = `Zoop is free and easy to use! All you need is an email.
-		Isn’t that zooper cool?`;
+		p3.innerText = ctaBoxpText.innerHTML;
+
 		const ctaBtn = document.createElement('button');
 		ctaBtn.classList.add('main-button');
 		ctaBtn.classList.add('is--invert-button');
-		ctaBtn.innerHTML = 'Explore Free Now';
+		ctaBtn.innerHTML = ctaBoxButtonText.innerHTML;
 
 		contentBox4.appendChild(contentBox4Title);
 		contentBox4.appendChild(p3);
