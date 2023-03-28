@@ -184,7 +184,7 @@ Webflow.push(function () {
 		ctaBtn.classList.add('main-button');
 		ctaBtn.classList.add('is--invert-button');
 		ctaBtn.innerHTML = ctaBoxButtonText.innerHTML;
-
+		ctaBtn.setAttribute('href', ctaBoxButtonText.href);
 		contentBox4.appendChild(contentBox4Title);
 		contentBox4.appendChild(p3);
 		contentBox4.appendChild(ctaBtn);
