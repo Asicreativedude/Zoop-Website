@@ -193,6 +193,7 @@ Webflow.push(function () {
 		divFrame.appendChild(sideScroll5);
 
 		document.querySelector('.sidescroll-append').appendChild(section);
+
 		Webflow.require('ix2').init();
 
 		let lottie = Webflow.require('lottie').lottie;
