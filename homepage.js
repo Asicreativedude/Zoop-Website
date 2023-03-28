@@ -95,19 +95,10 @@ Webflow.push(function () {
 		contentBox.classList.add('sidescroll-content-box');
 		const contentBoxTitle = document.createElement('h3');
 		contentBoxTitle.classList.add('sidescroll-content-title');
-<<<<<<< Updated upstream
-		contentBoxTitle.innerText = 'Explore and Follow';
-		const p = document.createElement('p');
-		p.classList.add('p-big');
-		p.innerText =
-			'Dive into our super inclusive party of celebrities and creators. Follow your favorites to unlock exclusive feeds with awesome content available on Zoop only! Connect with comments, likes, and replies.';
-
-=======
 		contentBoxTitle.innerText = secondBoxTitleText.innerHTML;
 		const p = document.createElement('p');
 		p.classList.add('p-big');
 		p.innerText = secondBoxPText.innerHTML;
->>>>>>> Stashed changes
 		contentBox.appendChild(contentBoxTitle);
 		contentBox.appendChild(p);
 		sideScroll2Container.appendChild(contentBox);
@@ -126,12 +117,7 @@ Webflow.push(function () {
 		contentBox2Title.innerText = thirdBoxTitleText.innerHTML;
 		const p1 = document.createElement('p');
 		p1.classList.add('p-big');
-<<<<<<< Updated upstream
-		p1.innerText =
-			'Start collecting Cards to take it to the next level. Cards come out in Seasons. Collect at least 6 Cards in a Season! Trade, buy, and sell cards to become a member of a unique community of fans.';
-=======
 		p1.innerText = thirdBoxPText.innerHTML;
->>>>>>> Stashed changes
 		const screenImage = document.createElement('img');
 		screenImage.setAttribute(
 			'src',
