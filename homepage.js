@@ -59,8 +59,6 @@ Webflow.push(function () {
 		firstBox.classList.add('sidescroll-content-first-box');
 		const firstBoxP = document.createElement('p');
 		firstBoxP.classList.add('p-big');
-		firstBoxP.innerText =
-			'Collect Cards every Season and get more chances to win. From a personalized shout-out to a real-life meet and greet - the opportunities to create an unforgettable connection are limitless!';
 		firstBox.appendChild(firstBoxP);
 		const firstBoxTitle = document.createElement('h3');
 		firstBoxTitle.classList.add('sidescroll-content-title');

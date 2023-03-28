@@ -23,52 +23,39 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	// 		onEnter: () => timeline.play(),
 	// 	});
 	// }
+	let animatedContainers = gsap.utils.toArray('[cd-animated]');
 
-	// $('[slideUpLetters]').each(function (index) {
-	// 	// let element = $(this);
-	// 	let tl = gsap.timeline({ paused: true });
-	// 	tl.from('.char', {
-	// 		opacity: 0,
-	// 		yPercent: 100,
-	// 		duration: 0.5,
-	// 		ease: 'ease.out(2)',
-	// 		stagger: { amount: 1 },
-	// 		ScrollTrigger: {
-	// 			trigger: $(this),
-	// 			start: 'top 60%',
-	// 			onEnter: () => tl.play(),
-	// 		},
-	// 	});
-	// 	// createScrollTrigger($(this), tl);
-	// });
-	let titles = gsap.utils.toArray('[slideUpLetters]');
-	titles.forEach((element) => {
+	animatedContainers.forEach((element) => {
+		let titles = gsap.utils.toArray('[slideUpLetters]');
+		let object = element.querySelectorAll('[slideup]');
 		let tl = gsap.timeline({ paused: true });
-		tl.from('.char', {
+		titles.forEach((element) => {
+			let char = element.querySelectorAll('.char');
+			tl.from(char, {
+				opacity: 0,
+				yPercent: 100,
+				duration: 0.5,
+				ease: 'back.out(2)',
+				stagger: { amount: 2 },
+			});
+			ScrollTrigger.create({
+				trigger: element,
+				start: 'top 60%',
+				onEnter: () => tl.play(),
+			});
+		});
+
+		tl.from(object, {
 			opacity: 0,
 			yPercent: 100,
 			duration: 1,
 			ease: 'back.out(2)',
-			stagger: { amount: 2 },
 		});
 		ScrollTrigger.create({
 			trigger: element,
-			start: 'top 30%',
+			start: 'top 60%',
 			onEnter: () => tl.play(),
 		});
 	});
-
-	$('[cd-animated]').each(function (index) {
-		let tl = gsap.timeline({ paused: true });
-		tl.from('[slideUp]', {
-			opacity: 0,
-			yPercent: 100,
-			duration: 1,
-			ease: 'back.out(2)',
-			stagger: { amount: 2 },
-		});
-		// createScrollTrigger($(this), tl);
-	});
-
-	gsap.set('[text-split], [slideUp]', { opacity: 1 });
+	gsap.set('[text-split]', { opacity: 1 });
 });
