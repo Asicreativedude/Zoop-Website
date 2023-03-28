@@ -180,7 +180,7 @@ Webflow.push(function () {
 		p3.classList.add('margin-0');
 		p3.innerText = ctaBoxpText.innerHTML;
 
-		const ctaBtn = document.createElement('button');
+		const ctaBtn = document.createElement('a');
 		ctaBtn.classList.add('main-button');
 		ctaBtn.classList.add('is--invert-button');
 		ctaBtn.innerHTML = ctaBoxButtonText.innerHTML;
