@@ -3,6 +3,23 @@ Webflow.push(function () {
 	window.addEventListener('resize', function () {
 		window.Webflow.require('lottie').lottie.resize();
 	});
+
+	const heroWrapper = document.querySelector('.herro-hp_parallex-wrapper');
+	const heroImg = document.createElement('img');
+	heroImg.classList.add('parallex-layer-1');
+	heroImg.setAttribute('loading', 'lazy');
+	heroImg.setAttribute('alt', '');
+	window.innerWidth < 992
+		? heroImg.setAttribute(
+				'src',
+				'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/642703a967339715740d4ade_Hero_noHearts-mobile.webp'
+		  )
+		: heroImg.setAttribute(
+				'src',
+				'https://uploads-ssl.webflow.com/640529b41dc5457b7da3eb69/641c6cdb6dbe3c07151289d8_heroFront%20(1).webp'
+		  );
+	heroWrapper.appendChild(heroImg);
+
 	const sidescrolltitle = document.getElementById('sidescroll-title');
 	const firstBoxPText = document.getElementById('firstbox-p');
 	const firstBoxTitleText = document.getElementById('firstbox-title');
