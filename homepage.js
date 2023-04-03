@@ -82,17 +82,17 @@ Webflow.push(function () {
 		sideScroll1Container.classList.add('first-sidescroll-container');
 		const sideScroll1Title = document.createElement('h2');
 		sideScroll1Title.classList.add('sidescroll-title');
-		sideScroll1Title.innerText = sidescrolltitle.innerHTML;
+		sideScroll1Title.innerText = sidescrolltitle.textContent;
 		sideScroll1Container.appendChild(sideScroll1Title);
 		const firstBox = document.createElement('div');
 		firstBox.classList.add('sidescroll-content-first-box');
 		const firstBoxP = document.createElement('p');
 		firstBoxP.classList.add('p-big');
-		firstBoxP.innerText = firstBoxPText.innerHTML;
+		firstBoxP.innerText = firstBoxPText.textContent;
 		firstBox.appendChild(firstBoxP);
 		const firstBoxTitle = document.createElement('h3');
 		firstBoxTitle.classList.add('sidescroll-content-title');
-		firstBoxTitle.innerText = firstBoxTitleText.innerHTML;
+		firstBoxTitle.innerText = firstBoxTitleText.textContent;
 		firstBox.appendChild(firstBoxTitle);
 		sideScroll1Container.appendChild(firstBox);
 
@@ -113,10 +113,10 @@ Webflow.push(function () {
 		const contentBoxTitle = document.createElement('h3');
 		contentBoxTitle.classList.add('sidescroll-content-title');
 
-		contentBoxTitle.innerText = secondBoxTitleText.innerHTML;
+		contentBoxTitle.innerText = secondBoxTitleText.textContent;
 		const p = document.createElement('p');
 		p.classList.add('p-big');
-		p.innerText = secondBoxPText.innerHTML;
+		p.innerText = secondBoxPText.textContent;
 		contentBox.appendChild(contentBoxTitle);
 		contentBox.appendChild(p);
 		sideScroll2Container.appendChild(contentBox);
@@ -132,10 +132,10 @@ Webflow.push(function () {
 		contentBox2.classList.add('sidescroll-content-box');
 		const contentBox2Title = document.createElement('h3');
 		contentBox2Title.classList.add('sidescroll-content-title');
-		contentBox2Title.innerText = thirdBoxTitleText.innerHTML;
+		contentBox2Title.innerText = thirdBoxTitleText.textContent;
 		const p1 = document.createElement('p');
 		p1.classList.add('p-big');
-		p1.innerText = thirdBoxPText.innerHTML;
+		p1.innerText = thirdBoxPText.textContent;
 		const screenImage = document.createElement('img');
 		screenImage.setAttribute(
 			'src',
@@ -161,10 +161,10 @@ Webflow.push(function () {
 		contentBox3.classList.add('sidescroll-content-box');
 		const contentBox3Title = document.createElement('h3');
 		contentBox3Title.classList.add('sidescroll-content-title');
-		contentBox3Title.innerText = fourthBoxTitleText.innerHTML;
+		contentBox3Title.innerText = fourthBoxTitleText.textContent;
 		const p2 = document.createElement('p');
 		p2.classList.add('p-big');
-		p2.innerText = fourthBoxPText.innerHTML;
+		p2.innerText = fourthBoxPText.textContent;
 		const screenImage2 = document.createElement('img');
 		screenImage2.setAttribute(
 			'src',
@@ -191,16 +191,16 @@ Webflow.push(function () {
 		contentBox4.classList.add('cta-box');
 		const contentBox4Title = document.createElement('h3');
 		contentBox4Title.classList.add('sidescroll-content-title');
-		contentBox4Title.innerText = ctaBoxTitleText.innerHTML;
+		contentBox4Title.innerText = ctaBoxTitleText.textContent;
 		const p3 = document.createElement('p');
 		p3.classList.add('p-big');
 		p3.classList.add('margin-0');
-		p3.innerText = ctaBoxpText.innerHTML;
+		p3.innerText = ctaBoxpText.textContent;
 
 		const ctaBtn = document.createElement('a');
 		ctaBtn.classList.add('main-button');
 		ctaBtn.classList.add('is--invert-button');
-		ctaBtn.innerHTML = ctaBoxButtonText.innerHTML;
+		ctaBtn.textContent = ctaBoxButtonText.textContent;
 		ctaBtn.setAttribute('href', ctaBoxButtonText.href);
 		contentBox4.appendChild(contentBox4Title);
 		contentBox4.appendChild(p3);
