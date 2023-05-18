@@ -222,7 +222,7 @@ Webflow.push(function () {
 				st = {
 					trigger: scrollTarget,
 					start: 'top top',
-					end: '78% bottom',
+					end: '88% bottom',
 				},
 				animation = lottie.loadAnimation({
 					container: target,
